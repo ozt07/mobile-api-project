@@ -23,6 +23,9 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// Servir archivos estáticos (interfaz web)
+app.use(express.static('src/public'));
+
 // Rutas de la API
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
@@ -59,6 +62,7 @@ async function startServer() {
             console.log('- GET /api/classes');
             console.log('- GET /api/agendas');
             console.log('- GET /api/billings');
+            console.log('- Interfaz web: http://localhost:3000');
         });
     } catch (error) {
         console.error('Error al iniciar el servidor:', error);

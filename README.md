@@ -10,24 +10,100 @@ API RESTful desarrollada con **Node.js**, **Express**, **Sequelize** y **SQLite*
 - Base de datos **SQLite** con **Sequelize ORM**  
 - Estructura **modular** con controladores y rutas  
 - Soporte para **Docker** y **Docker Compose**  
+- **Interfaz web incluida** para gestión visual del sistema
 
 ---
 
-## 🗂️ Estructura del Proyecto
+## 🎨 INTERFAZ WEB INCLUIDA
+
+### Características de la Interfaz
+
+📱 **Diseño responsive y moderno**  
+➕ **Crear productos** con formulario validado  
+👀 **Ver productos** en formato de tarjetas  
+✏️ **Editar productos** en tiempo real  
+🗑️ **Eliminar productos** con confirmación  
+🔄 **Actualización automática** de la lista  
+
+**URL de la Interfaz:**  
+👉 [http://localhost:3000](http://localhost:3000)
+
+### Funcionalidades Implementadas
+
+- **CREATE ➕** Crear nuevos productos  
+- **READ 👀** Listar todos los productos en formato amigable  
+- **UPDATE ✏️** Editar productos existentes  
+- **DELETE 🗑️** Eliminar productos con confirmación  
+
+### Capturas de la Interfaz
+
+```
+🍳 RecipeMaster API Tester
+├── 📦 Gestión de Productos
+│   ├── 🔄 Actualizar Lista
+│   ├── ➕ Crear Producto
+│   └── Lista de productos en tarjetas
+│       ├── ✏️ Botón Editar
+│       └── 🗑️ Botón Eliminar
+```
+
+---
+
+## 🔄 ACTUALIZAR DOCKER
+
+Para incluir los últimos cambios en Docker:
+
+```bash
+# Reconstruir y ejecutar con los nuevos cambios
+docker-compose down
+docker-compose up --build
+
+# O para limpiar completamente
+docker-compose down -v
+docker-compose up --build
+```
+
+---
+
+## 📊 ESTRUCTURA ACTUALIZADA DEL PROYECTO
 
 ```
 mobile-api-project/
 ├── src/
-│   ├── app.js
-│   ├── database/connection.js
-│   ├── models/
-│   ├── controllers/
-│   └── routes/
-├── Dockerfile
-├── docker-compose.yml
-├── package.json
-└── README.md
+│   ├── app.js                 # Servidor principal + archivos estáticos
+│   ├── public/                # Interfaz web
+│   │   └── index.html         # Frontend completo con CRUD
+│   ├── database/
+│   │   └── connection.js      # Configuración Sequelize
+│   ├── models/                # 5 modelos de datos
+│   ├── controllers/           # 5 controladores CRUD
+│   └── routes/                # 5 rutas de API
+├── Dockerfile                 # Configuración de contenedor
+├── docker-compose.yml         # Orquestación Docker
+└── README.md                  # Documentación completa
 ```
+
+---
+
+## 🎯 USO DE LA INTERFAZ WEB
+
+### Iniciar servidor:
+
+```bash
+npm start
+# o con Docker
+docker-compose up --build
+```
+
+### Abrir navegador:
+👉 [http://localhost:3000](http://localhost:3000)
+
+### Probar funcionalidades:
+
+- Click **"➕ Crear Producto"** para agregar nuevos items  
+- Click **"✏️ Editar"** en cualquier producto para modificarlo  
+- Click **"🗑️ Eliminar"** para borrar productos  
+- Click **"🔄 Actualizar Lista"** para refrescar la vista  
 
 ---
 
@@ -86,4 +162,4 @@ docker-compose up --build
 
 ---
 
-🧡 *Desarrollado con Node.js y buenas prácticas REST.*
+🧡 *Desarrollado con Node.js, Express y una interfaz web integrada para RecipeMaster.*
