@@ -1,15 +1,29 @@
 {
   "name": "mobile-api-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "API RESTful para RecipeMaster con Node.js, Express, Sequelize y SQLite",
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
-    "dev": "nodemon src/app.js"
+    "dev": "nodemon src/app.js",
+    "deploy": "gcloud app deploy",
+    "gcp-build": "npm install"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "api",
+    "restful",
+    "nodejs",
+    "express",
+    "sequelize",
+    "sqlite",
+    "recipe",
+    "mobile"
+  ],
+  "author": "ozt07",
   "license": "ISC",
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
